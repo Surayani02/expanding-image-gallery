@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  /* flex-direction: column; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin: 0px auto;
+}
+
+.panel:nth-child(1) {
+  background-image: url('https://cdn.pixabay.com/photo/2020/09/26/07/05/sea-5603352_960_720.jpg');
+}
+
+.panel:nth-child(2) {
+  background-image: url('https://cdn.pixabay.com/photo/2021/03/09/14/33/dog-6082017__340.jpg');
+}
+
+.panel:nth-child(3) {
+  background-image: url('https://cdn.pixabay.com/photo/2021/01/24/20/47/big-basin-redwood-state-park-5946500__340.jpg');
+}
+
+.panel:nth-child(4) {
+  background-image: url('https://cdn.pixabay.com/photo/2021/03/02/12/20/mountains-6062271__340.jpg');
+}
+
+.panel:nth-child(5) {
+  background-image: url('https://cdn.pixabay.com/photo/2021/02/21/18/48/elks-6037526__340.jpg');
+}
+
+.panel {
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  border-radius: 80px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 25px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media(max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-child(4), .panel:nth-child(5) {
+    display: none;
+  }
+}
