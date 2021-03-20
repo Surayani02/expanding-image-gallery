@@ -47,7 +47,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 80vh;
-  border-radius: 80px;
+  opacity: 0.4;
+  border-radius: 100px;
   color: #fff;
   cursor: pointer;
   flex: 0.5;
@@ -57,7 +58,9 @@ body {
 }
 
 .panel h3 {
-  font-size: 25px;
+  font-size: 24px;
+  padding: 20px;
+  font-weight: 300;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -66,10 +69,12 @@ body {
 
 .panel.active {
   flex: 5;
+  opacity: 1;
 }
 
 .panel.active h3 {
   opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 
 @media(max-width: 480px) {
